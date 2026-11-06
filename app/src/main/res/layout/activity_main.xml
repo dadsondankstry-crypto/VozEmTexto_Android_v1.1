@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:padding="18dp" android:background="@color/background">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:gravity="center_vertical">
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:orientation="vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Voz em Texto" android:textSize="27sp" android:textStyle="bold"
+                android:textColor="@color/text_main" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Transcreva sem complicação" android:textSize="13sp"
+                android:textColor="@color/text_muted" />
+        </LinearLayout>
+        <TextView android:id="@+id/btnSettings" android:layout_width="52dp"
+            android:layout_height="52dp" android:gravity="center" android:background="@drawable/secondary_button"
+            android:text="⚙" android:contentDescription="Abrir configurações"
+            android:textSize="27sp" android:textColor="@color/text_main" />
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:layout_marginTop="20dp" android:padding="16dp"
+        android:background="@drawable/panel">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="DE ONDE VEM O SOM?" android:letterSpacing="0.07"
+            android:textSize="12sp" android:textStyle="bold" android:textColor="@color/text_muted" />
+        <RadioGroup android:id="@+id/sourceGroup" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginTop="10dp">
+            <RadioButton android:id="@+id/sourceMic" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:checked="true" android:text="🎤  Minha voz (microfone)"
+                android:textSize="16sp" android:textColor="@color/text_main" android:paddingVertical="5dp" />
+            <RadioButton android:id="@+id/sourceInternal" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:text="🔊  Áudio do celular (quando permitido)"
+                android:textSize="15sp" android:textColor="@color/text_main" android:paddingVertical="5dp" />
+        </RadioGroup>
+        <TextView android:id="@+id/modeDescription" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="8dp" android:textSize="12sp"
+            android:textColor="@color/text_muted" android:text="Modo: palavra por palavra • Janela: desligada" />
+    </LinearLayout>
+
+    <TextView android:id="@+id/status" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:layout_marginTop="13dp" android:layout_marginBottom="9dp"
+        android:paddingHorizontal="4dp" android:text="● Pronto para começar"
+        android:textColor="@color/mint" android:textSize="14sp" />
+
+    <Button android:id="@+id/btnStart" android:layout_width="match_parent"
+        android:layout_height="52dp" android:text="▶  Iniciar transcrição"
+        android:textColor="@color/text_main" android:textSize="16sp" android:textStyle="bold"
+        android:textAllCaps="false" android:background="@drawable/primary_button" />
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"
+        android:orientation="vertical" android:padding="14dp" android:layout_marginTop="16dp"
+        android:background="@drawable/panel">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="TRANSCRIÇÃO" android:letterSpacing="0.08"
+            android:textSize="12sp" android:textStyle="bold" android:textColor="@color/text_muted" />
+        <ScrollView android:id="@+id/scrollText" android:layout_width="match_parent"
+            android:layout_height="0dp" android:layout_weight="1" android:fillViewport="true"
+            android:layout_marginTop="10dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView android:id="@+id/txtFinal" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:text="Sua transcrição aparecerá aqui..."
+                    android:textColor="@color/text_main" android:textSize="17sp"
+                    android:lineSpacingExtra="5dp" android:textIsSelectable="true" />
+                <TextView android:id="@+id/txtPartial" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:textColor="@color/mint"
+                    android:textSize="17sp" android:lineSpacingExtra="4dp" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:layout_marginTop="12dp">
+        <Button android:id="@+id/btnCopy" android:layout_width="0dp" android:layout_weight="1"
+            android:layout_height="47dp" android:text="Copiar" android:textAllCaps="false"
+            android:textColor="@color/text_main" android:background="@drawable/secondary_button" />
+        <Button android:id="@+id/btnSave" android:layout_width="0dp" android:layout_weight="1"
+            android:layout_marginStart="8dp" android:layout_height="47dp" android:text="Salvar TXT"
+            android:textAllCaps="false" android:textColor="@color/text_main" android:background="@drawable/secondary_button" />
+        <Button android:id="@+id/btnShare" android:layout_width="0dp" android:layout_weight="1"
+            android:layout_marginStart="8dp" android:layout_height="47dp" android:text="Enviar"
+            android:textAllCaps="false" android:textColor="@color/text_main" android:background="@drawable/secondary_button" />
+    </LinearLayout>
+    <TextView android:id="@+id/btnClear" android:layout_width="match_parent" android:layout_height="45dp"
+        android:gravity="center" android:text="Apagar transcrição" android:textColor="@color/alert"
+        android:textSize="13sp" android:layout_marginTop="5dp" />
+</LinearLayout>

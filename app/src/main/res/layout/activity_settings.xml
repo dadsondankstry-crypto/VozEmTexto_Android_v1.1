@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/background">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="20dp">
+        <TextView android:id="@+id/btnBack" android:layout_width="match_parent"
+            android:layout_height="49dp" android:text="‹  Voltar"
+            android:textColor="@color/mint" android:textSize="18sp" android:gravity="center_vertical" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Configurações" android:textSize="28sp" android:textStyle="bold"
+            android:textColor="@color/text_main" android:layout_marginTop="14dp" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:background="@drawable/panel" android:orientation="vertical"
+            android:padding="17dp" android:layout_marginTop="24dp">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="Como o texto aparece" android:textSize="18sp" android:textStyle="bold"
+                android:textColor="@color/text_main" />
+            <RadioGroup android:id="@+id/groupMode" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginTop="12dp">
+                <RadioButton android:id="@+id/radioWords" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:text="Palavra por palavra (prévia ao vivo)"
+                    android:textColor="@color/text_main" android:textSize="15sp" android:paddingVertical="6dp" />
+                <RadioButton android:id="@+id/radioPhrases" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:text="Frases completas (após pausa)"
+                    android:textColor="@color/text_main" android:textSize="15sp" android:paddingVertical="6dp" />
+            </RadioGroup>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="No modo ao vivo, as palavras provisórias podem mudar quando a frase é concluída."
+                android:textSize="13sp" android:textColor="@color/text_muted" android:layout_marginTop="10dp" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:background="@drawable/panel" android:orientation="vertical"
+            android:padding="17dp" android:layout_marginTop="15dp">
+            <Switch android:id="@+id/switchOverlay" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:text="Mostrar janelinha flutuante"
+                android:textSize="16sp" android:textColor="@color/text_main" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="Desligado: transcreve em segundo plano sem janela. Ligado: acompanha o texto por cima de outros apps."
+                android:textSize="13sp" android:textColor="@color/text_muted" android:layout_marginTop="12dp" />
+            <TextView android:id="@+id/btnOverlayHelp" android:layout_width="match_parent"
+                android:layout_height="52dp" android:text="Como liberar a janela flutuante?  ›"
+                android:gravity="center_vertical" android:textColor="@color/mint" android:textSize="15sp" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:background="@drawable/panel" android:orientation="vertical"
+            android:padding="17dp" android:layout_marginTop="15dp">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="Privacidade e permissões" android:textSize="18sp"
+                android:textStyle="bold" android:textColor="@color/text_main" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" android:textColor="@color/text_muted" android:textSize="14sp"
+                android:text="• O reconhecimento funciona no próprio celular, depois do download do modelo de português.\n\n• Gravação de áudio: solicitada para usar microfone ou captura interna.\n\n• Áudio interno: o Android exige autorização de captura a cada início. Alguns aplicativos bloqueiam a captura.\n\n• Notificação fixa: o Android mostra quando a transcrição estiver ativa.\n\n• O texto fica no aparelho até você apagá-lo ou compartilhá-lo." />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
